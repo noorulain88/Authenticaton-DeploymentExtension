@@ -160,6 +160,7 @@ Replace the example email with the email of your registered account. Log out and
 
 | Method | Endpoint | Purpose |
 |---|---|---|
+| GET | `/api/health` | Check API status |
 | POST | `/api/auth/register` | Register a user |
 | POST | `/api/auth/login` | Log in |
 | GET | `/api/auth/me` | Get logged-in user details |
@@ -170,6 +171,7 @@ Replace the example email with the email of your registered account. Log out and
 | DELETE | `/api/courses/:id` | Delete a course |
 | POST | `/api/enroll` | Enroll in a course |
 | GET | `/api/enroll/my-courses` | View enrolled courses |
+| PATCH | `/api/enroll/:id/progress` | Update course progress |
 | GET | `/api/admin/analytics` | View admin information |
 | GET | `/api/admin/users` | View users |
 | PATCH | `/api/admin/users/:id/role` | Change a user's role |
@@ -183,7 +185,7 @@ Local verification was completed on 2026-10-17 with Node.js 24.18.0, npm 11.16.0
 
 Live API checks covered registration and login, JWT-protected endpoints, admin analytics, course create/update/delete and lesson creation, student enrollment and My Courses, duplicate enrollment (`409`), role-denied actions (`403`), unauthenticated admin access (`401`), and invalid credentials (`401`). Browser checks covered registration, login feedback, all three role dashboards, course browsing/detail, enrollment, progress updates, and protected-route redirects.
 
-Actual browser captures from this run are saved as `report-*.png` in the project root. The included Postman collection was not used for this verification, and the application has not been deployed. The `npm install` audit summaries reported 3 high-severity backend advisories and 2 moderate-severity frontend advisories; review `npm audit` in both packages before deployment. No automated dependency upgrades were applied.
+The final PDF is [evidence/LearnHub-Final-Report.pdf](evidence/LearnHub-Final-Report.pdf). Genuine application, API, and source screenshots are organized under `evidence/screenshots/application`, `evidence/screenshots/api`, and `evidence/screenshots/source`. API checks used PowerShell HTTP requests because Postman/Newman was not installed; the application has not been deployed. The `npm install` audit summaries reported 3 high-severity backend advisories and 2 moderate-severity frontend advisories; review `npm audit` in both packages before deployment. No automated dependency upgrades were applied.
 
 ## Deployment
 
@@ -200,4 +202,4 @@ The project should be tested before deployment. I should also make sure that pri
 
 ## Conclusion
 
-LearnHub demonstrates a full-stack learning platform with JWT authentication, password hashing, role-based access, course management, student enrollment, and progress tracking. See `REPORT_TEMPLATE.md` for the captured local screenshots and verification details.
+LearnHub demonstrates a full-stack learning platform with JWT authentication, password hashing, role-based access, course management, student enrollment, and progress tracking. See the linked final PDF report for the captured local screenshots and verification details.

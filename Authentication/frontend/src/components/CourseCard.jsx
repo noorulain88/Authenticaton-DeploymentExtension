@@ -5,7 +5,7 @@ const palettes = [
 ];
 
 export default function CourseCard({ course, index = 0 }) {
-  const instructorName = course.instructor?.name || "LearnHub Instructor";
+  const instructorName = course.instructor?.name || course.instructorName || "LearnHub Instructor";
   return (
     <article className="course-card">
       <div className={`course-art ${palettes[index % palettes.length]}`}>

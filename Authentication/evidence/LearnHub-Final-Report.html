@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LearnHub MERN | Final Project Evidence</title>
+<style>
+@page { size: A4; margin: 16mm 15mm 17mm; }
+:root { --ink:#172b36; --muted:#52636d; --teal:#176b68; --mint:#d8ece6; --gold:#d99535; --line:#d9e1e3; --paper:#fff; --wash:#f3f7f6; }
+* { box-sizing:border-box; }
+html { color:var(--ink); background:var(--paper); font-family:"Segoe UI",Calibri,Arial,sans-serif; font-size:10pt; line-height:1.48; }
+body { margin:0; }
+h1,h2,h3,p { margin-top:0; }
+h1 { font-size:31pt; line-height:1.1; margin-bottom:10pt; }
+h2 { font-size:20pt; line-height:1.2; margin-bottom:10pt; color:var(--ink); }
+h3 { font-size:12pt; margin:0 0 6pt; color:var(--teal); }
+p { color:var(--muted); margin-bottom:9pt; }
+small,.small { font-size:8.5pt; color:var(--muted); }
+code,pre { font-family:Consolas,"Cascadia Code",monospace; }
+code { color:#0f5657; font-size:9pt; }
+.cover { min-height:245mm; position:relative; padding:20mm 10mm 15mm; display:flex; flex-direction:column; justify-content:space-between; background:linear-gradient(145deg,#132d38 0%,#1b5555 62%,#27736b 100%); color:#fff; page-break-after:always; }
+.cover * { color:inherit; }
+.kicker { font-size:9pt; text-transform:uppercase; letter-spacing:1.8px; color:#b7ded2; font-weight:700; }
+.cover h1 { font-size:38pt; max-width:150mm; margin:0 0 12pt; }
+.cover .subtitle { max-width:145mm; color:#d4e5e1; font-size:15pt; }
+.cover .tag { display:inline-block; border:1px solid #80b7aa; border-radius:3px; padding:5pt 9pt; color:#e1f3ed; font-size:9pt; margin:3pt 4pt 0 0; }
+.cover .meta { border-top:1px solid #77a89d; padding-top:12pt; color:#d5e7e2; }
+.cover .cover-image { width:100%; max-height:90mm; object-fit:cover; object-position:top; border:1px solid #92b9b0; border-radius:4px; }
+.section { padding-top:2mm; }
+.page { page-break-before:always; }
+.lead { font-size:12pt; color:var(--ink); max-width:175mm; }
+.callout { background:var(--wash); border-left:4px solid var(--teal); padding:9pt 12pt; margin:12pt 0; color:var(--ink); }
+.callout.warn { border-color:var(--gold); background:#fff8ed; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:7pt; margin:14pt 0; }
+.stat { background:var(--wash); border:1px solid var(--line); padding:9pt; border-radius:3px; }
+.stat strong { display:block; color:var(--teal); font-size:17pt; }
+.stat span { color:var(--muted); font-size:8pt; text-transform:uppercase; }
+figure { margin:0 0 13pt; padding:8pt; border:1px solid var(--line); border-radius:4px; background:#fff; break-inside:avoid; }
+figure img { display:block; width:100%; max-height:168mm; object-fit:contain; object-position:top center; background:#f2f5f4; }
+figcaption { padding-top:6pt; color:var(--muted); font-size:8.5pt; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:9pt; }
+.grid2 figure img { max-height:92mm; }
+table { width:100%; border-collapse:collapse; font-size:8.4pt; margin:9pt 0 14pt; break-inside:auto; }
+thead { display:table-header-group; }
+tr { break-inside:avoid; }
+th { background:var(--ink); color:#fff; text-align:left; padding:6pt; }
+td { border-bottom:1px solid var(--line); padding:5pt 6pt; vertical-align:top; color:var(--muted); }
+td strong { color:var(--ink); }
+pre { white-space:pre-wrap; word-break:break-word; margin:8pt 0 12pt; padding:10pt 12pt; color:#e9f2ef; background:#172a33; border-radius:3px; font-size:8.5pt; line-height:1.45; }
+.endpoint { white-space:nowrap; }
+.two-col { columns:2; column-gap:18pt; }
+.note { font-size:8.4pt; color:var(--muted); }
+footer { position:fixed; bottom:-11mm; left:0; right:0; border-top:1px solid var(--line); padding-top:4pt; color:var(--muted); font-size:8pt; display:flex; justify-content:space-between; }
+@media screen { body { max-width:900px; margin:24px auto; padding:0 24px; } .cover { min-height:900px; } }
+</style>
+</head>
+<body>
+<footer><span>LearnHub MERN · Local verification · 17 Oct 2026</span><span>Final project evidence</span></footer>
+<section class="cover">
+  <div>
+    <div class="kicker">MERN stack · local QA evidence</div>
+    <h1>LearnHub<br>Final Project Report</h1>
+    <p class="subtitle">A verified walkthrough of the running learning platform, its API contracts, role controls, database connection, and source implementation.</p>
+    <span class="tag">React + Vite</span><span class="tag">Node + Express</span><span class="tag">MongoDB + Mongoose</span><span class="tag">JWT</span>
+  </div>
+  <img class="cover-image" src="screenshots/application/app-home.png" alt="Actual LearnHub home page running locally">
+  <div class="meta"><strong>Verification date:</strong> 17 October 2026<br><strong>Frontend:</strong> http://localhost:5173<br><strong>API:</strong> http://localhost:5000/api<br><strong>Database:</strong> local MongoDB database <code>learnhub</code>; credentials and JWT secret are intentionally omitted.</div>
+</section>
+
+<section class="section">
+<h2>Executive Summary</h2>
+<p class="lead">The project was run against the local MongoDB service and verified through its browser UI and HTTP API. Evidence below was captured from the actual running application and real endpoint responses; no demo/mock screenshots were substituted.</p>
+<div class="stats"><div class="stat"><strong>24</strong><span>API checks passed</span></div><div class="stat"><strong>4</strong><span>seeded courses after cleanup</span></div><div class="stat"><strong>3</strong><span>role dashboards verified</span></div><div class="stat"><strong>0</strong><span>secrets included</span></div></div>
+<div class="callout"><strong>Local run status:</strong> MongoDB connected; backend health returned <code>ok</code>; frontend returned HTTP 200; frontend production build completed successfully.</div>
+<h3>Review changes verified</h3>
+<p>The React JSX runtime initially failed because Vite had no React plugin configuration. <code>frontend/vite.config.js</code> now activates the installed plugin, and the production build passes. Existing MongoDB course documents include a legacy <code>instructorName</code> field while the populated instructor reference can be null; the course card and detail view now fall back to that stored name. The existing database documents were not migrated.</p>
+<div class="callout warn"><strong>Remaining notes:</strong> the build succeeds but Vite reports a JavaScript chunk slightly above 500 kB. Dependency installation previously reported 3 high-severity backend and 2 moderate-severity frontend advisories; review <code>npm audit</code> before deployment. The backend terminal output was verified, but a genuine desktop screenshot of that specific terminal could not be selected in this environment, so no unrelated terminal image is presented as evidence.</div>
+</section>
+
+<section class="page">
+<h2>Setup and Database</h2>
+<h3>Requirements and commands</h3>
+<p>Verified environment: Node.js 24.18.0, npm 11.16.0, MongoDB 8.3. The backend package script uses nodemon for development. Run the commands from the project root in separate terminals:</p>
+<pre>cd backend
+npm install
+npm run dev
+
+cd frontend
+npm install
+npm run dev</pre>
+<table><thead><tr><th>Setting</th><th>Verified value or handling</th></tr></thead><tbody>
+<tr><td><code>PORT</code></td><td>5000</td></tr><tr><td><code>MONGO_URI</code></td><td><code>mongodb://127.0.0.1:27017/learnhub</code> (local development DB)</td></tr><tr><td><code>JWT_SECRET</code></td><td>Configured in local <code>backend/.env</code>; value redacted and not included in this report.</td></tr><tr><td><code>CLIENT_URL</code></td><td><code>http://localhost:5173</code> (allowed CORS origin)</td></tr><tr><td><code>VITE_API_URL</code></td><td><code>http://localhost:5000/api</code></td></tr></tbody></table>
+<h3>Backend startup transcript</h3>
+<p>This is the verified output from the backend terminal session. It contains no environment values:</p>
+<pre>PS C:\Users\786\Downloads\LearnHub-MERN-Q2&gt; Set-Location 'C:\Users\786\Downloads\LearnHub-MERN-Q2\Authentication\backend'; npm run dev
+
+&gt; learnhub-backend@1.0.0 dev
+&gt; nodemon server.js
+
+[nodemon] starting `node server.js`
+MongoDB connected: 127.0.0.1
+LearnHub API running on port 5000</pre>
+<figure><img src="screenshots/api/api-health-get.png" alt="Actual JSON health response from running API"><figcaption>Figure 1. Live <code>GET /api/health</code> response captured from the running backend.</figcaption></figure>
+</section>
+
+<section class="page">
+<h2>Application Screenshots</h2>
+<figure><img src="screenshots/application/app-home.png" alt="LearnHub home page"><figcaption>Figure 2. Public home page with the four seeded courses loaded from MongoDB.</figcaption></figure>
+<div class="grid2">
+<figure><img src="screenshots/application/app-register.png" alt="LearnHub registration page"><figcaption>Figure 3. Registration form; public roles are Student and Instructor.</figcaption></figure>
+<figure><img src="screenshots/application/app-login.png" alt="LearnHub login page"><figcaption>Figure 4. Login form with no credentials entered.</figcaption></figure>
+</div>
+<figure><img src="screenshots/application/app-login-error.png" alt="Invalid login error"><figcaption>Figure 5. Real API 401 response rendered as invalid-credentials feedback. The entered password is masked and is not reproduced in this report.</figcaption></figure>
+</section>
+
+<section class="page">
+<h2>Courses and Learning</h2>
+<figure><img src="screenshots/application/app-course-list-fixed.png" alt="Course catalog"><figcaption>Figure 6. Course catalog after the instructor-name compatibility fallback; four database-backed courses are shown.</figcaption></figure>
+<figure><img src="screenshots/application/app-course-detail-fixed.png" alt="Course detail page"><figcaption>Figure 7. Course detail view showing the stored instructor name from the live API record.</figcaption></figure>
+<div class="grid2">
+<figure><img src="screenshots/application/app-student-dashboard.png" alt="Student dashboard"><figcaption>Figure 8. Student dashboard loaded from an authenticated session.</figcaption></figure>
+<figure><img src="screenshots/application/app-my-courses.png" alt="My Courses with enrollment"><figcaption>Figure 9. My Courses shows the enrolled MongoDB course and 10% progress. Captured before the temporary local test account was cleaned up.</figcaption></figure>
+</div>
+<figure><img src="screenshots/application/app-course-published.png" alt="Instructor course creation success"><figcaption>Figure 10. Instructor dashboard after a real course-create request succeeded; the temporary test course was removed after capture.</figcaption></figure>
+</section>
+
+<section class="page">
+<h2>Roles and Protected Routes</h2>
+<div class="grid2">
+<figure><img src="screenshots/application/app-instructor-dashboard.png" alt="Instructor dashboard"><figcaption>Figure 11. Instructor workspace with course-management actions.</figcaption></figure>
+<figure><img src="screenshots/application/app-admin-dashboard.png" alt="Admin dashboard"><figcaption>Figure 12. Admin analytics, user management, and course library. Captured during authenticated admin verification.</figcaption></figure>
+</div>
+<figure><img src="screenshots/application/app-protected-route.png" alt="Unauthorized route redirect"><figcaption>Figure 13. A logged-in Student attempting to open the Admin route is redirected to the actual 403 unauthorized page.</figcaption></figure>
+</section>
+
+<section class="page">
+<h2>API Contract</h2>
+<p>Base URL: <code>http://localhost:5000/api</code>. Protected calls require <code>Authorization: Bearer &lt;token&gt;</code>. The actual HTTP tests used PowerShell <code>Invoke-WebRequest</code>/<code>Invoke-RestMethod</code>; Postman and Newman were not installed. The request bodies below reflect the controllers and routes.</p>
+<table><thead><tr><th>Method and endpoint</th><th>Access</th><th>Request body / notes</th></tr></thead><tbody>
+<tr><td class="endpoint">GET <code>/health</code></td><td>Public</td><td>No body.</td></tr>
+<tr><td>POST <code>/auth/register</code></td><td>Public</td><td><code>{ name, email, password: "&lt;redacted&gt;", role }</code>. Public registration permits student/instructor; an admin role request is downgraded to student.</td></tr>
+<tr><td>POST <code>/auth/login</code></td><td>Public</td><td><code>{ email, password: "&lt;redacted&gt;" }</code>. Returns a JWT; token omitted here.</td></tr>
+<tr><td>GET <code>/auth/me</code></td><td>Bearer token</td><td>Current authenticated user.</td></tr>
+<tr><td>GET <code>/courses</code></td><td>Public</td><td>Optional <code>search</code> and <code>category</code> query parameters.</td></tr>
+<tr><td>GET <code>/courses/:id</code></td><td>Public</td><td>Single course by MongoDB ID.</td></tr>
+<tr><td>POST <code>/courses</code></td><td>Instructor/Admin</td><td><code>{ title, description, category, price }</code>.</td></tr>
+<tr><td>PUT <code>/courses/:id</code></td><td>Owner/Admin</td><td>Any of <code>title, description, category, price</code>.</td></tr>
+<tr><td>DELETE <code>/courses/:id</code></td><td>Owner/Admin</td><td>No body; removes related enrollments and course.</td></tr>
+<tr><td>POST <code>/courses/:id/lessons</code></td><td>Owner/Admin</td><td><code>{ title, url, description }</code>; URL must be HTTP(S).</td></tr>
+<tr><td>POST <code>/enroll</code></td><td>Student</td><td><code>{ courseId }</code>.</td></tr>
+<tr><td>GET <code>/enroll/my-courses</code></td><td>Student</td><td>Returns the student's enrollments.</td></tr>
+<tr><td>PATCH <code>/enroll/:id/progress</code></td><td>Student/owner</td><td><code>{ progress }</code>, numeric range 0–100.</td></tr>
+<tr><td>GET <code>/admin/analytics</code></td><td>Admin</td><td>No body.</td></tr>
+<tr><td>GET <code>/admin/users</code></td><td>Admin</td><td>No body; excludes password hashes.</td></tr>
+<tr><td>PATCH <code>/admin/users/:id/role</code></td><td>Admin</td><td><code>{ role: "student" | "instructor" | "admin" }</code>.</td></tr>
+</tbody></table>
+</section>
+
+<section class="page">
+<h2>HTTP Test Results</h2>
+<p>All 24 checks below ran against the local API and passed their expected status-code assertions. The temporary course and users created for the API test were removed afterward; the database was checked to contain the original four courses.</p>
+<table><thead><tr><th>Operation</th><th>Expected/actual HTTP</th><th>Result</th></tr></thead><tbody>
+<tr><td>GET <code>/health</code></td><td>200</td><td>Pass</td></tr>
+<tr><td>POST <code>/auth/register</code> as student</td><td>201</td><td>Pass</td></tr>
+<tr><td>POST <code>/auth/register</code> as instructor</td><td>201</td><td>Pass</td></tr>
+<tr><td>POST <code>/auth/login</code> as admin</td><td>200</td><td>Pass</td></tr>
+<tr><td>GET <code>/auth/me</code> with bearer token</td><td>200</td><td>Pass</td></tr>
+<tr><td>GET <code>/courses</code></td><td>200</td><td>Pass</td></tr>
+<tr><td>POST <code>/courses</code> as instructor</td><td>201</td><td>Pass</td></tr>
+<tr><td>GET <code>/courses/:id</code></td><td>200</td><td>Pass</td></tr>
+<tr><td>PUT <code>/courses/:id</code> as owner</td><td>200</td><td>Pass</td></tr>
+<tr><td>POST <code>/courses/:id/lessons</code></td><td>201</td><td>Pass</td></tr>
+<tr><td>POST <code>/enroll</code> as student</td><td>201</td><td>Pass</td></tr>
+<tr><td>GET <code>/enroll/my-courses</code></td><td>200</td><td>Pass</td></tr>
+<tr><td>PATCH <code>/enroll/:id/progress</code></td><td>200</td><td>Pass</td></tr>
+<tr><td>Duplicate POST <code>/enroll</code></td><td>409</td><td>Pass (expected conflict)</td></tr>
+<tr><td>POST <code>/courses</code> as student</td><td>403</td><td>Pass (expected forbidden)</td></tr>
+<tr><td>GET <code>/admin/analytics</code> as admin</td><td>200</td><td>Pass</td></tr>
+<tr><td>GET <code>/admin/users</code> as admin</td><td>200</td><td>Pass</td></tr>
+<tr><td>PATCH <code>/admin/users/:id/role</code> then restore role</td><td>200 / 200</td><td>Pass</td></tr>
+<tr><td>GET <code>/admin/analytics</code> as student</td><td>403</td><td>Pass (expected forbidden)</td></tr>
+<tr><td>GET <code>/admin/analytics</code> without token</td><td>401</td><td>Pass (expected unauthorized)</td></tr>
+<tr><td>POST <code>/auth/login</code> with invalid credentials</td><td>401</td><td>Pass (expected unauthorized)</td></tr>
+<tr><td>DELETE <code>/courses/:id</code> as owner</td><td>200</td><td>Pass</td></tr>
+<tr><td>GET deleted <code>/courses/:id</code></td><td>404</td><td>Pass (expected not found)</td></tr>
+</tbody></table>
+<div class="grid2">
+<figure><img src="screenshots/api/api-courses-get.png" alt="Live JSON GET courses response"><figcaption>Figure 14. Actual JSON from <code>GET /api/courses</code> after temporary test data cleanup.</figcaption></figure>
+<figure><img src="screenshots/api/api-course-by-id-get.png" alt="Live JSON GET course response"><figcaption>Figure 15. Actual JSON from <code>GET /api/courses/:id</code>; legacy record fields are visible.</figcaption></figure>
+</div>
+</section>
+
+<section class="page">
+<h2>Source Evidence</h2>
+<p>These images show the actual source files opened directly from the project. The backend contracts, token middleware, database configuration, frontend API client, and instructor fallback are visible. The local <code>.env</code> files were not opened or captured.</p>
+<div class="grid2">
+<figure><img src="screenshots/source/code-course-routes.png" alt="Course routes source"><figcaption>Figure 16. Course routes and role restrictions.</figcaption></figure>
+<figure><img src="screenshots/source/code-auth-middleware.png" alt="Auth middleware source"><figcaption>Figure 17. JWT verification and role authorization middleware.</figcaption></figure>
+<figure><img src="screenshots/source/code-auth-controller.png" alt="Auth controller source"><figcaption>Figure 18. Registration, password hashing, login, and token creation.</figcaption></figure>
+<figure><img src="screenshots/source/code-database-config.png" alt="Database connection source"><figcaption>Figure 19. Database connection reads the configured environment variable without exposing its value.</figcaption></figure>
+<figure><img src="screenshots/source/code-frontend-api-client.png" alt="Frontend API client source"><figcaption>Figure 20. Axios base URL and bearer-token interceptor.</figcaption></figure>
+<figure><img src="screenshots/source/code-course-card.png" alt="Course card instructor fallback"><figcaption>Figure 21. Course card compatibility fallback for existing MongoDB records.</figcaption></figure>
+</div>
+<figure><img src="screenshots/source/code-course-detail.png" alt="Course detail instructor fallback"><figcaption>Figure 22. Course detail instructor name uses the populated relation first, then the legacy stored display field.</figcaption></figure>
+</section>
+
+<section class="page">
+<h2>Conclusion and Submission Notes</h2>
+<p class="lead">The local application is running and the tested API/UI flows passed. The core paths verified include registration/login, JWT checks, role-specific dashboards, protected routes, course CRUD, lessons, student enrollment, progress, admin role changes, and expected error responses.</p>
+<table><thead><tr><th>Evidence item</th><th>Outcome</th></tr></thead><tbody>
+<tr><td>Local frontend/backend/database</td><td>Verified live at <code>localhost:5173</code>, <code>localhost:5000</code>, and local MongoDB.</td></tr>
+<tr><td>Frontend production build</td><td>Pass; Vite emitted a non-fatal chunk-size warning.</td></tr>
+<tr><td>Postman</td><td>Not installed. API testing used PowerShell HTTP requests against the real API, not a simulated collection run.</td></tr>
+<tr><td>Backend terminal image</td><td>Not included; the active backend log was verified but the desktop capture remained on a different VS Code terminal. A genuine API health screenshot and safe startup transcript are included instead.</td></tr>
+<tr><td>Deployment</td><td>Not performed; no hosted URL is claimed.</td></tr>
+<tr><td>Credentials/secrets</td><td>No passwords, JWTs, or environment-variable values are included.</td></tr>
+</tbody></table>
+<p class="note">The bundled Postman collection contains only a subset of implemented endpoints; the live test matrix above also verifies lesson creation, progress updates, role changes, and authorization failures. Before deployment, review dependency audit findings and validate the ownership references on legacy seed records if instructors need to edit those specific courses.</p>
+<p><strong>Run locally:</strong> follow <code>README.md</code>. Admin access must be assigned to a trusted account in MongoDB; public registration intentionally cannot grant admin privileges.</p>
+</section>
+</body>
+</html>

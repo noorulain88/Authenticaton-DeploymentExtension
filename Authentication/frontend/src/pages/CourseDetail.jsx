@@ -13,6 +13,7 @@ export default function CourseDetail() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const instructorName = course?.instructor?.name || course?.instructorName || "LearnHub Instructor";
 
   useEffect(() => {
     api.get(`/courses/${id}`).then(({ data }) => setCourse(data))
@@ -41,7 +42,7 @@ export default function CourseDetail() {
         <div className="eyebrow detail-eyebrow">LEARN SOMETHING NEW</div>
         <h1>{course.title}</h1>
         <p className="detail-description">{course.description}</p>
-        <div className="detail-instructor"><span className="instructor-avatar large">{(course.instructor?.name || "L").charAt(0).toUpperCase()}</span><div><small>Created by</small><strong>{course.instructor?.name || "LearnHub Instructor"}</strong></div></div>
+        <div className="detail-instructor"><span className="instructor-avatar large">{instructorName.charAt(0).toUpperCase()}</span><div><small>Created by</small><strong>{instructorName}</strong></div></div>
         <div className="lessons-panel"><h2>Course lessons</h2>{course.lessons?.length ? course.lessons.map((lesson, i) => <div className="lesson-row" key={lesson._id || i}><span className="lesson-number">{String(i + 1).padStart(2, "0")}</span><div><strong>{lesson.title}</strong><small>{lesson.description || "Course lesson"}</small></div><a className="lesson-open" href={lesson.url} target="_blank" rel="noreferrer">Open ↗</a></div>) : <p className="muted">Lessons will appear here when the instructor adds them.</p>}</div>
       </div>
       <aside className="enroll-card"><div className="eyebrow">YOUR NEXT STEP</div><div className="detail-price">{Number(course.price) === 0 ? "Free" : `$${Number(course.price).toFixed(2)}`}</div><p>Start learning at your own pace.</p><button className="btn btn-primary btn-full" onClick={handleEnroll} disabled={busy}>{busy ? "Enrolling…" : "Enroll in course ↗"}</button>{error && <Alert>{error}</Alert>}{success && <Alert type="success">{success} <Link to="/dashboard">Go to My Courses →</Link></Alert>}<div className="enroll-divider" /><div className="includes-title">WHAT'S INCLUDED</div><div className="include-item"><span>✓</span> Course access</div><div className="include-item"><span>✓</span> Learn at your own pace</div><div className="include-item"><span>✓</span> Track your progress</div></aside>
